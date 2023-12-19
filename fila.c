@@ -11,13 +11,9 @@ typedef struct  {
 
 //Prototipação
 
-void incializaFila(tipo_fila *fl);
-
 void insereFila(tipo_fila *fl, int valor);
 
 void imprimeFila(tipo_fila fl);
-
-void imprimeNovaFila(tipo_fila fl);
 
 int removeFila(tipo_fila *fl); // precisa retornar um valor 
 
@@ -49,19 +45,13 @@ int main() {
 }
 
 
-//Procedimento que inicializa a fila 
-
-void incializaFila(tipo_fila *fl) {
-  fl->contador = 0;
-}
-
-
 //Procedimento que insere elemento na fila 
 
 void insereFila(tipo_fila *fl, int valor) {
     if (fl->contador < N) {
         
-            fl->fila[fl->contador] = valor;fl->contador++;
+            fl->fila[fl->contador] = valor;
+            fl->contador++;
         }
 
 
@@ -100,18 +90,7 @@ int removeFila(tipo_fila *fl) {
 }
 
 
-void imprimeNovaFila(tipo_fila fl){
 
-  
-  printf("A nova fila é: [");
-  for(int i=0; i < fl.contador; i++){
-    printf("%d\t",fl.fila[i]);
-  }
-    printf("]\n");
-
-   printf("O valor de contador eh: %d\n", fl.contador);
-
-}
 
 
 
